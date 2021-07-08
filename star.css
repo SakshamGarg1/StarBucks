@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.green-line{
+    background-color: rgb(2, 94, 2);
+    height: 10px;
+    width: 100%;
+}
+.storebtn{
+    background-color: rgb(241, 241, 241);
+    border-color: rgb(241, 241, 241) ;
+    width: 150px;
+    height: 22px;
+}
+.initials{
+    padding-top: 11px;
+    background-color:rgb(241, 241, 241);
+    font-family: Verdana,  Tahoma, sans-serif, Arial, Helvetica ;
+    width: 100%;
+    height: 200px;
+}
+.store-finder{
+    width: 50%;
+    margin-right: 2pc;
+    margin-top: 1pc;
+    direction: rtl;
+    
+   justify-content: right;
+
+}
+#map{
+    height: 550px;
+    width:80%;
+    justify-content:right;
+    }
+.logo{
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    margin-left: 24px;
+}
+.logo-IMG{
+    width: 50%;
+}
+.list{
+    margin-left: 25px;
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 80px;
+    
+}
+.last_link{
+    margin-left: 25px;
+    margin-top: 15px;
+    list-style-type: none;
+    padding-left: 20px;
+
+}
+.map-area{
+    height: 550px;;
+    border: 6px solid rgb(240, 237, 237); 
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+}
+.mapsearching{
+    width: 232px;
+    height: 40px;
+}
+.footer .sb-social-icons {
+    border: none;
+    border-bottom: 0;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+}
+.footer .sb-social-icons li.facebook {
+    width: 47px;
+}
+.footer .sb-social-icons .facebook a {
+    background-position: 0 0;
+    width: 25px;
+
+}
+.social{
+    margin-top: 3px;
+    background-color: rgb(240, 237, 237);
+    height: 100px;
+}
+.sb-social-icons {
+    display: flex;
+    text-indent: 20px;
+    padding-top: 15px;
+    list-style: none;    
+} 
+.credentials{
+    margin-top: 35px;
+    height: 250px;
+    background-color: rgb(240, 237, 237);
+    display: flex;
+    justify-content: space-between;
+    padding-left: 60px ;
+    padding-right: 460px ;
+    padding-top: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 27px;
+}
+.img{
+    height: 50px;
+    width: 40px;
+    border-radius: 10px;
+}
+.footer .sb-social-icons li {
+    float: left;
+    width: 55px;
+    height: 31px;
+    margin-bottom: .5em;}
+.footer .sb-social-icons a {
+        float: left;
+        width: 45px;
+        height: 31px;
+        background: url(/static/images/social_icons.png) no-repeat;
+        background-size: auto 100%;
+        transition: opacity 125ms ease-in-out;
+    }
+.v-resp{
+    opacity: 100%;
+
+}

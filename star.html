@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarBucks Locator
+
+    </title>
+    <link rel="stylesheet" href="star.css">
+    <script src="star.js"></script>
+</head>
+<body>
+    <section>
+        <div class="green-line"> 
+
+        </div>
+        <div class="initials">
+            <div class="logo">
+            
+        
+        <div class="logo-IMG"> <img src="./1200px-Starbucks_Corporation_Logo_2011.svg.png" width="60px " height="60px"  alt="logo"></div>
+        <div class="store-finder">
+            <a href="http://www.starbucks.in/store-locator" title="Find A Store"><span aria-hidden="true" data-icon="✪"></span><span class="hidden_visually med_render_visually"></span></a>
+            <span aria-hidden="true" data-icon="✪"></span>
+
+        <p class="locator" id="locator"><button class="storebtn">Find a Store</button> </p>
+        </div> 
+         </div>
+        <div class="links">
+        <ul class="list last">
+            <li input
+            type="text"
+            ><label for="Coffee"></label>COFFEE</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>MENU</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>COFFEEHOUSE</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>RESPONSIBLITY</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>REWARD</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>CAREERS</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>GIFT A STARBUCKS</li>
+            <li input
+            type="text"
+            ><label for="Coffee"></label>STARBUCKS DELIVERS</li>
+        </ul>
+            
+
+        </div>
+        <ul>
+        <li class ="last_link last"input type="text"
+            ><label for="Coffee"></label>ABOUT US</li>
+        </ul>
+        
+    </div> 
+     
+    </section>
+    
+    <section class="map-area v-resp">
+        <div><input class="mapsearching" type="text" id="location_name" placeholder="Enter a location"> </div>
+        <div id="map">  </div> 
+        <!-- my java script tag starts from here:- --> 
+        <script>
+            function initMap(){
+      
+           var options = {
+           zoom:5,
+           center:{lat:20.5937,lng:78.9629}
+      }
+
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      var input = document.getElementById('location_name');
+      map.controls[google.maps.controlposition.Top_left].push(input);
+
+      var marker = new google.maps.Marker({
+          position :{lat:28.6304,lng:77.2177},
+          map:map
+      });
+    }
+        </script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO335rAujBAt0M3nCF-xFOTixXD1cnQ_I&callback=initMap">
+        </script>
+
+    </section>
+    <section class="social">
+        <ul class="sb-social-icons column size12of12 med_size4of12 ">
+            <li class="facebook">
+                <a href="https://www.facebook.com/starbucksindia" title="Facebook">
+                    <span class="hidden_visually"><img src="./facebook_icon_130940.png" alt="face" class="img"></span>
+                </a>
+            </li>
+            <li class="twitter">
+                <a href="https://twitter.com/starbucksindia" title="Twitter">
+                    <span class="hidden_visually"><img class="img" src="./10wmt-superJumbo-v4.jpeg" alt="tweet"></span>
+                </a>
+            </li>
+            <li class="instagram">
+                <a href="https://www.instagram.com/starbucksindia" title="Instagram">
+                    <span class="hidden_visually"><img src="./Screenshot 2021-07-01 at 7.12.14 PM.png" alt="insta" class="img"></span>
+                </a>
+            </li>
+        </ul>
+        <div class="credentials" >
+         <ul>About Us</ul>
+         <ul>Customer Service</ul>
+         <ul>Quick Links</ul>
+
+        </div>
+        
+    </section>
+</body>
+</html>
