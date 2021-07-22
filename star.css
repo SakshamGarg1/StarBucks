@@ -63,14 +63,14 @@ html{
     padding-left: 20px;
 
 }
-.map-area{
+.maparea{
     height: 550px;;
     border: 6px solid rgb(240, 237, 237); 
     margin-left: 40px;
     margin-right: 40px;
     display: flex;
 }
-.mapsearching{
+.controls{
     width: 232px;
     height: 40px;
 }

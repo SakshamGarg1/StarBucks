@@ -24,7 +24,7 @@
             <a href="http://www.starbucks.in/store-locator" title="Find A Store"><span aria-hidden="true" data-icon="✪"></span><span class="hidden_visually med_render_visually"></span></a>
             <span aria-hidden="true" data-icon="✪"></span>
 
-        <p class="locator" id="locator"><button class="storebtn">Find a Store</button> </p>
+        <p class="locator" id="locator"><button class="storebtn" id="storebtn1">Find a Store</button> </p>
         </div> 
          </div>
         <div class="links">
@@ -66,33 +66,85 @@
      
     </section>
     
-    <section class="map-area v-resp">
-        <div><input class="mapsearching" type="text" id="location_name" placeholder="Enter a location"> </div>
+    <section class="maparea v-resp" id="maparea">
+        <div><input class="controls" type="text" id="searchInput" placeholder="Enter a location"><button>Search</button> </div>
         <div id="map">  </div> 
         <!-- my java script tag starts from here:- --> 
-        <script>
+
+
+    <script>
+            
             function initMap(){
       
-           var options = {
-           zoom:5,
-           center:{lat:20.5937,lng:78.9629}
+      var options = {
+        zoom:5,
+        center:{lat:20.5937,lng:78.9629}
       }
+      //search bar tool #galat ho gaya ye
+      //var input = document.getElementById('searchInput');
+      //map.control[google.maps.ControlPosition.TOP_LEFT].push(input);
 
+      
       var map = new google.maps.Map(document.getElementById('map'), options);
 
-      var input = document.getElementById('location_name');
-      map.controls[google.maps.controlposition.Top_left].push(input);
-
-      var marker = new google.maps.Marker({
-          position :{lat:28.6304,lng:77.2177},
-          map:map
+     
+      google.maps.event.addListener(map, 'click', function(event){
+      
+        addMarker({coords:event.latLng});
       });
-    }
-        </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO335rAujBAt0M3nCF-xFOTixXD1cnQ_I&callback=initMap">
-        </script>
 
+    
+      var markers = [
+        {
+          coords:{lat:28.7009,lng:77.2721},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>yamu</h1>'
+        },
+        {
+          coords:{lat:28.6990,lng:77.1387},
+          content:'<h1>pitam</h1>'
+        },
+        {
+          coords:{lat:28.5354,lng:77.2420}
+        }
+      ];
+
+      
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          
+        });
+
+       
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBO335rAujBAt0M3nCF-xFOTixXD1cnQ_I&callback=initMap">
+    </script>
     </section>
     <section class="social">
         <ul class="sb-social-icons column size12of12 med_size4of12 ">

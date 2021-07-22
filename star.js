@@ -1,6 +1,6 @@
-locator = document.querySelector('.locator')
-map-area = document.querySelector('.map-area')
+document.querySelector('#storebtn1')
 
-locator.addEventlistener('click',()=>{
-map-area.classList.toggle('v-resp');
-})
+document.querySelector('#storebtn1')
+.addEventListener('click',()=>{
+    window.location.reload(true);
+});
